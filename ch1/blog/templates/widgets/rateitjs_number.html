@@ -1,0 +1,18 @@
+{% include "django/forms/widgets/input.html" %}
+{{ form.media }}
+
+
+<div id="rateit_{{ widget.attrs.id }}" class="rateit" data-rateit-backingfld="#{{ widget.attrs.id }}"></div>
+
+
+<script>
+    $(function() {
+        /*
+        // https://github.com/gjunge/rateit.js/wiki#events
+        $('#rateit_{{ widget.attrs.id }}').bind('rated', function() {
+            var value = $(this).rateit('value');
+            $('#{{ widget.attrs.id }}').val(value);
+        });
+        */
+    });
+</script>
